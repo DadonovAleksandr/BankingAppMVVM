@@ -1,6 +1,6 @@
-﻿using BankingAppMVVM.ViewModel.Base;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using BankingAppMVVM.MVVM.ViewModel.Base;
 
 namespace BankingAppMVVM.MVVM.Model.Accounts.Base
 {
@@ -54,9 +54,9 @@ namespace BankingAppMVVM.MVVM.Model.Accounts.Base
 
         #region OnPropertyChanged
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public new event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

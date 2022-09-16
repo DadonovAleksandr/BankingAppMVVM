@@ -1,8 +1,9 @@
 ﻿using System.Windows;
+using BankingAppMVVM.Core.Commands.Base;
 
 namespace BankingAppMVVM.Core.Commands
 {
-    internal class ShutDownCommand : Command
+    public class ShutDownCommand : Command
     {
         public override bool CanExecute(object parameter) => true;
 

@@ -1,13 +1,13 @@
 ﻿using BankingAppMVVM.Core.Commands;
 using BankingAppMVVM.MVVM.Model.Accounts;
 using BankingAppMVVM.MVVM.Model.Employees.Base;
-using BankingAppMVVM.ViewModel.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using BankingAppMVVM.MVVM.ViewModel.Base;
 
 namespace BankingAppMVVM.MVVM.ViewModel
 {
@@ -25,6 +25,7 @@ namespace BankingAppMVVM.MVVM.ViewModel
                 OnPropertyChanged();
             }
         }
+        public Employee Employee { get; private set; }
 
         #endregion
 
@@ -34,7 +35,6 @@ namespace BankingAppMVVM.MVVM.ViewModel
         public SettingsViewModel SettingsVM { get; set; }
         public NewAccountViewModel NewAccountVM { get; set; }
         public AboutViewModel AboutVM { get; set; }
-
         public Account Account { get; set; }
 
         #endregion
@@ -87,7 +87,7 @@ namespace BankingAppMVVM.MVVM.ViewModel
 
         #endregion
 
-        public MainViewModel() {}
+        public MainViewModel() { }
         public MainViewModel(Employee employee)
         {
             #region Views
@@ -98,6 +98,7 @@ namespace BankingAppMVVM.MVVM.ViewModel
             AboutVM = new AboutViewModel();
 
             CurrentView = AccountsVM;
+            Employee = employee;
 
             #endregion
 
