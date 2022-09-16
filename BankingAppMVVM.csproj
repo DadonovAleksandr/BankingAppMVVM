@@ -195,6 +195,8 @@
     <Compile Include="MVVM\View\LoginWindow\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\View\MainWindow\Views\Convertors\PassportDataToString.cs" />
+    <Compile Include="MVVM\View\MainWindow\Views\Convertors\PhoneNumberToString.cs" />
     <Compile Include="Resources\Extensions.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="MVVM\ViewModel\Base\ViewModelBase.cs" />
@@ -299,7 +301,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="MVVM\View\MainWindow\Views\Media\w-hand.gif" />
   </ItemGroup>
